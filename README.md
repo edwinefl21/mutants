@@ -11,7 +11,7 @@ There are two endpoints on this application:
 ##Application Usage
 You will receive as parameter an array of Strings that represent each row of a table of (NxN) with the DNA sequence. The letters of the Strings can only be: (A, T, C, G), which represents each nitrogenous DNA base.
 
-![Table Image](https://github.com/edwinefl21/mutants/blob/master/images/matrix.png)
+![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/matrix.png)
 
 
 ### Endpoint /stats/
@@ -21,7 +21,7 @@ http://mutantsmeli.koreacentral.cloudapp.azure.com:8080/stats/ [GET]
 ```javascript
 {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
 ```
-![Table Image](https://github.com/edwinefl21/mutants/blob/master/images/get_petition.png)
+![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/get_petition.png)
 ### Endpoint /mutants/
 
 This endpoint will validate a DNA sequence to check if there is a mutant or not
@@ -33,15 +33,16 @@ The POST body must be a JSON similar the bellow example
 	"dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
 }
 ```
-![Table Image](https://github.com/edwinefl21/mutants/blob/master/images/post_petition.png)
-![Table Image](https://github.com/edwinefl21/mutants/blob/master/images/post_petition2.png)
+![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/post_petition.png)
+![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/post_petition2.png)
 
 
 - If the DNA sequence validate is **positive** to mutants will be returned the HTTP code 200.
 - If the DNA sequence validate is **negative** to mutants will be returned the HTTP code 403.
 - If the DNA sequence does not contain the allowed letters (A, T, C, G) mutants will be returned the HTTP code 400.
 - If the DNA sequence parameter is empty or null  will be returned the HTTP code 400.
-![Table Image](https://github.com/edwinefl21/mutants/blob/master/images/DB_DNA.png)
+
+![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/DB_DNA.png)
 
 
 ## Deploying
