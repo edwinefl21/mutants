@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "dna")
 public class DNA {
     @Id
-    private Long id;
+    private String id;
     private DNASequence dna;
     @Indexed(name = "is_mutant")
     private boolean isMutant;
