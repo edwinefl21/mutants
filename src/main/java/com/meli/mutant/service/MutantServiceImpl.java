@@ -22,7 +22,7 @@ public class MutantServiceImpl implements IMutantService{
         validateIfDNAMatchAllowCharacters(dnaSequence);
 
         var isMutant= validateIfDNAIsMutant(dnaSequence);
-        var dna = new DNA(dnaSequence,true);
+        var dna = new DNA(dnaSequence,isMutant);
         repository.save(dna);
         return isMutant;
     }
