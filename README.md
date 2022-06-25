@@ -58,3 +58,12 @@ The project will always check that the DB is already initialized for starting to
 $ docker-compose down -v
 $ docker-compose up -d
 ```
+
+## Technology Stack
+This project was build using [Spring boot] and uses the following technologies:
+    -Java 11 (OpenJDK 11 (LTS))
+    -MongoDB
+    -Azure
+    -Maven
+    -Git
+    -Junit
