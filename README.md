@@ -45,7 +45,7 @@ The POST body must be a JSON similar the bellow example
 ![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/DB_DNA.png)
 
 ## Coverage
-![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/coverage.png)
+![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/coverageImage.png)
 
 
 ## Deploying
