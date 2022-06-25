@@ -61,6 +61,7 @@ $ docker-compose up -d
 
 ## Technology Stack
 This project was build using [Spring boot] and uses the following technologies:
+
     -Java 11 (OpenJDK 11 (LTS))
     -MongoDB
     -Azure
