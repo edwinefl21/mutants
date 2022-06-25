@@ -70,6 +70,17 @@ public class MutantServiceImplTest {
         assertEquals(dnaSequence.toString(),"DNASequence [ dna =[ATGCGA, CAGTGC, TTATGT, AGAAGG, CCCCTA, TCACTG]]");
     }
 
+
+    @Test
+    void GivenDnaSequenceValidThenReturnIsNotMutant() {
+        DNASequence dnaSequence = new DNASequence();
+        dnaSequence.setDna(new ArrayList<>(Arrays.asList("ATGCGA","CAGTGC","TTATTT","AGACGG","GCGTCA","TCACTG")));
+        when(repository.save(any(DNA.class))).thenReturn(new DNA(dnaSequence,false));
+        boolean mutant = service.isMutant(dnaSequence);
+        assertEquals(mutant,false);
+        assertEquals(dnaSequence.toString(),"DNASequence [ dna =[ATGCGA, CAGTGC, TTATTT, AGACGG, GCGTCA, TCACTG]]");
+    }
+
     @Test
     void GivenDnaSequenceInValidThenManageException() throws InvalidStringParametersException {
         DNASequence dnaSequence = new DNASequence();

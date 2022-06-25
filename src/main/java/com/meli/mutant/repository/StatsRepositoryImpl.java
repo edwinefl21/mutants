@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
 
 @Repository
-public class IStatsRepositoryImpl implements IStatsRepository{
+public class StatsRepositoryImpl implements IStatsRepository{
 
     @Autowired
     private transient MongoTemplate template;

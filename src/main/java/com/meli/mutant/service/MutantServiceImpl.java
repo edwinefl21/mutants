@@ -8,9 +8,7 @@ import com.meli.mutant.repository.IDNARepository;
 import com.meli.mutant.util.DNAUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-//import javax.transaction.Transactional;
-
+import org.springframework.transaction.annotation.Transactional;
 
 //@Transactional
 @Service
@@ -20,7 +18,6 @@ public class MutantServiceImpl implements IMutantService{
     public boolean isMutant(DNASequence dnaSequence) {
 
         validateIfDNAMatchAllowCharacters(dnaSequence);
-
         var isMutant= validateIfDNAIsMutant(dnaSequence);
         var dna = new DNA(dnaSequence,isMutant);
         repository.save(dna);

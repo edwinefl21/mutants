@@ -4,13 +4,12 @@ import com.meli.mutant.model.DNAStats;
 import com.meli.mutant.repository.IStatsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-//import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 @Service
-//@Transactional
+@Transactional
 public class StatsServiceImpl implements IStatsService{
    @Autowired
     private IStatsRepository repository;

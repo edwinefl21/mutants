@@ -44,6 +44,9 @@ The POST body must be a JSON similar the bellow example
 
 ![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/DB_DNA.png)
 
+## Coverage
+![Table Image](https://github.com/edwinefl21/mutants/blob/main/images/coverage.png)
+
 
 ## Deploying
 The project is dockerized, and it has an external MongoDB Database dockerized too. For deploying both of them you only need to run the following commands into PROJECT_ROOT_PATH.
